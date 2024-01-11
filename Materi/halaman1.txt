@@ -1,5 +1,11 @@
 Judul = maling kundang
 
+<<<<<<< HEAD
 deskripsi = Lorem Ipsum is simply dummy text of 
 
 keterangan = Lorem Ipsum is simply dummy text of
+=======
+deskripsi =
+
+keterangan =
+>>>>>>> parent of b1cf115 (second commit)
