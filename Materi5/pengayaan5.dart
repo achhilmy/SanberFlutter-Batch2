@@ -63,7 +63,7 @@ class Mobil {
   }
 
   void matikanMesin() {
-    mesinMenyala = false;
+    // mesinMenyala = false;
     print('Mesin mobil $merek $model dimatikan.');
   }
 }
