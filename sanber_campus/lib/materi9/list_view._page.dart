@@ -6,7 +6,7 @@ class ListViewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final data_object = [
+    final dataObject = [
       {
         "id": "1",
         "title": "Achmad Hilmy",
@@ -46,26 +46,26 @@ class ListViewPage extends StatelessWidget {
       ),
       // ignore: avoid_unnecessary_containers
       body: Container(
-        padding: EdgeInsets.all(16),
-        margin: EdgeInsets.only(top: 10),
+        padding: const EdgeInsets.all(16),
+        margin: const EdgeInsets.only(top: 10),
         child: ListView.separated(
-            itemCount: data_object.length,
+            itemCount: dataObject.length,
             separatorBuilder: (context, index) {
-              return Divider();
+              return const Divider();
             },
             itemBuilder: (context, index) {
               return InkWell(
                 onTap: () {
                   if (kDebugMode) {
-                    print(data_object[index]["id"]);
+                    print(dataObject[index]["id"]);
                   }
                 },
                 child: ListTile(
                   leading: Image.network(
-                    data_object[index]["image_profile"].toString(),
+                    dataObject[index]["image_profile"].toString(),
                   ),
-                  title: Text(data_object[index]["title"].toString()),
-                  subtitle: Text(data_object[index]["status"].toString()),
+                  title: Text(dataObject[index]["title"].toString()),
+                  subtitle: Text(dataObject[index]["status"].toString()),
                   trailing: IconButton(
                     icon: const Icon(Icons.arrow_circle_right),
                     onPressed: () {},

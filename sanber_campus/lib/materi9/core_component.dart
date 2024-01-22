@@ -11,7 +11,7 @@ class CoreComponentPage extends StatelessWidget {
         title: const Text("Hello world"),
         backgroundColor: Colors.amber,
         actions: [
-          ElevatedButton(onPressed: () {}, child: Icon(Icons.back_hand))
+          ElevatedButton(onPressed: () {}, child: const Icon(Icons.back_hand))
         ],
       ),
       body: Container(
@@ -24,7 +24,7 @@ class CoreComponentPage extends StatelessWidget {
               Container(height: 100, width: 100, color: Colors.yellow),
               Container(height: 100, width: 100, color: Colors.purple),
               Container(height: 100, width: 100, color: Colors.blue),
-              Text(
+              const Text(
                 "Hello World",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
@@ -39,12 +39,12 @@ class CoreComponentPage extends StatelessWidget {
                   onPressed: () {
                     print("Hello World");
                   },
-                  child: Text("Elevated Button")),
+                  child: const Text("Elevated Button")),
               IconButton(
                   onPressed: () {
                     print("Icon button");
                   },
-                 icon: Icon(Icons.alarm)),
+                 icon: const Icon(Icons.alarm)),
               TextButton(
                   onPressed: () {
                     Navigator.push(
@@ -52,7 +52,7 @@ class CoreComponentPage extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => const ListViewPage()));
                   },
-                  child: Text("Menuju halaman List View Page"))
+                  child: const Text("Menuju halaman List View Page"))
             ],
           )),
     );
