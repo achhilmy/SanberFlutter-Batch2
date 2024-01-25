@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CatLandingAnimation extends StatefulWidget {
+  const CatLandingAnimation({super.key});
+
   @override
   _CatLandingAnimationState createState() => _CatLandingAnimationState();
 }
@@ -17,7 +19,7 @@ class _CatLandingAnimationState extends State<CatLandingAnimation>
     // Membuat AnimationController dengan durasi 2 detik
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 2),
+      duration: const Duration(seconds: 2),
     );
 
     // Membuat animasi berupa translasi vertikal (Y) dari atas ke bawah
@@ -36,7 +38,7 @@ class _CatLandingAnimationState extends State<CatLandingAnimation>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cat Landing Animation'),
+        title: const Text('Cat Landing Animation'),
       ),
       body: AnimatedBuilder(
         animation: _animation,

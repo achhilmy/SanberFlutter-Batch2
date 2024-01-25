@@ -9,6 +9,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
   void initState() {
     super.initState();
     print("Ini Halaman splash");
@@ -16,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> splashToStyling() async {
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 2), () {
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => const StylingPage()));
     });
@@ -30,9 +31,9 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset("assets/image/logo_splash.png"),
-            CircularProgressIndicator(),
-            SizedBox(height: 20),
-            Text("Now Loading . . .")
+            const CircularProgressIndicator(),
+            const SizedBox(height: 20),
+            const Text("Now Loading . . .")
           ],
         ),
       ),

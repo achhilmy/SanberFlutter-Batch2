@@ -7,9 +7,9 @@ class StylingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Halaman Styling")),
+      appBar: AppBar(title: const Text("Halaman Styling")),
       body: Container(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           children: [
             Container(
@@ -19,7 +19,7 @@ class StylingPage extends StatelessWidget {
             ),
             Container(
                 color: Colors.blue,
-                margin: EdgeInsets.only(top: 10),
+                margin: const EdgeInsets.only(top: 10),
                 child: ListTile(
                   leading: Container(
                     height: 45,
@@ -28,16 +28,16 @@ class StylingPage extends StatelessWidget {
                         color: Colors.purple,
                         borderRadius: BorderRadius.circular(20)),
                   ),
-                  title: Text("Nama : Achmad Hilmy"),
-                  subtitle: Text("Email : Achmad@gmail.com"),
-                  trailing: Icon(
+                  title: const Text("Nama : Achmad Hilmy"),
+                  subtitle: const Text("Email : Achmad@gmail.com"),
+                  trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: Colors.white,
                   ),
                 )),
             Container(
-              margin: EdgeInsets.only(top: 10),
-              padding: EdgeInsets.all(10),
+              margin: const EdgeInsets.only(top: 10),
+              padding: const EdgeInsets.all(10),
               height: 80,
               width: MediaQuery.of(context).size.width / 1,
               color: Colors.red,
@@ -51,20 +51,20 @@ class StylingPage extends StatelessWidget {
                         color: Colors.purple,
                         borderRadius: BorderRadius.circular(20)),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
-                  Text("Nama: Achma`d Hilmy"),
-                  Icon(Icons.arrow_forward_ios)
+                  const Text("Nama: Achma`d Hilmy"),
+                  const Icon(Icons.arrow_forward_ios)
                 ],
               ),
             ),
-            SizedBox(height: 10),
-            ButtonWidget(
+            const SizedBox(height: 10),
+            const ButtonWidget(
               title: "Button Submit",
             ),
-            SizedBox(height: 10),
-            ButtonWidget(
+            const SizedBox(height: 10),
+            const ButtonWidget(
               title: "Button Edit",
             ),
           ],

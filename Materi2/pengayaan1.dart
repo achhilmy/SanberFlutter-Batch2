@@ -1,7 +1,3 @@
-/// 1. a - integer adalah tipe data yang berbasis angka satuan misal 1, 2,3 dst float adalah tipe data yang menggunakan pecahan, atau koma di belakang angak misal 1.0, 2.0, 4.6 dst
-///    b. String namaSaya = "Achmad Hilmy"
-///
-import 'dart:io';
 
 void main() {
   // var word = 'dart';

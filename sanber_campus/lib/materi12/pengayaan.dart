@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class GestureAnimationExample extends StatefulWidget {
+  const GestureAnimationExample({super.key});
+
   @override
   _GestureAnimationExampleState createState() =>
       _GestureAnimationExampleState();
@@ -13,9 +15,10 @@ class _GestureAnimationExampleState extends State<GestureAnimationExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Gesture Animation Example'),
+        title: const Text('Gesture Animation Example'),
       ),
       body: GestureDetector(
+        onTap: (){},
         onHorizontalDragUpdate: (details) {
           // Geser ke kanan (+ve) atau ke kiri (-ve)
           setState(() {
@@ -23,10 +26,10 @@ class _GestureAnimationExampleState extends State<GestureAnimationExample> {
           });
         },
         child: AnimatedContainer(
-          duration: Duration(milliseconds: 300),
+          duration: const Duration(milliseconds: 300),
           color: Colors.blue,
           margin: EdgeInsets.only(left: _positionX),
-          child: Center(
+          child: const Center(
             child: Text(
               'Swipe me!',
               style: TextStyle(color: Colors.white),

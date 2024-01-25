@@ -9,20 +9,20 @@ class LoginScreen extends StatelessWidget {
       body: Container(
         padding: const EdgeInsets.all(16.0),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(
+          const Text(
             "SanberFlutter",
             style: TextStyle(
                 color: Color(0xff54C5F8),
                 fontSize: 30,
                 fontWeight: FontWeight.w300),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Image.network(
             "https://web-strapi.mrmilu.com/uploads/flutter_logo_470e9f7491.png",
             height: 100,
             width: 100,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           const TextField(
             decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
@@ -30,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 hintText: "Username"),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           const TextField(
@@ -40,18 +40,18 @@ class LoginScreen extends StatelessWidget {
                 ),
                 hintText: "Password"),
           ),
-          TextButton(onPressed: () {}, child: Text('Forgot Password')),
+          TextButton(onPressed: () {}, child: const Text('Forgot Password')),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text("Login"),
+              child: const Text("Login"),
             ),
           ),
           Row(
             children: [
-              Text("Dont have account?"),
-              TextButton(onPressed: () {}, child: Text("Register"))
+              const Text("Dont have account?"),
+              TextButton(onPressed: () {}, child: const Text("Register"))
             ],
           )
         ]),

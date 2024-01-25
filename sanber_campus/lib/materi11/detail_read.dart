@@ -42,7 +42,14 @@ class _DetailReadDataPageState extends State<DetailReadDataPage> {
               }
 
               // By default, show a loading spinner.
-              return const CircularProgressIndicator();
+              return Center(
+                child: Column(
+                  children: [
+                    CircularProgressIndicator(),
+                    Text("Loading . . .")
+                  ],
+                ),
+              );
             },
           ),
         ),

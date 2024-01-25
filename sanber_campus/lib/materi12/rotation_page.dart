@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class InfiniteLoopAnimationExample extends StatefulWidget {
+  const InfiniteLoopAnimationExample({super.key});
+
   @override
   _InfiniteLoopAnimationExampleState createState() =>
       _InfiniteLoopAnimationExampleState();
@@ -18,7 +20,7 @@ class _InfiniteLoopAnimationExampleState
     // Membuat AnimationController dengan durasi 2 detik dan repeat infiniti
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 2),
+      duration: const Duration(seconds: 2),
     )..repeat();
   }
 
@@ -26,7 +28,7 @@ class _InfiniteLoopAnimationExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Infinite Loop Animation Example'),
+        title: const Text('Infinite Loop Animation Example'),
       ),
       body: Center(
         child: RotationTransition(
@@ -35,7 +37,7 @@ class _InfiniteLoopAnimationExampleState
             width: 100.0,
             height: 100.0,
             color: Colors.blue,
-            child: Center(
+            child: const Center(
               child: Text(
                 'Spinning',
                 style: TextStyle(color: Colors.white),

@@ -5,7 +5,7 @@ class HomeScreenPengayaan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final data_object = [
+    final dataObject = [
       "https://images.yuktravel.com/images/upload/articles/big1/EifelTower.jpg",
       "https://images.yuktravel.com/images/upload/articles/big1/EifelTower.jpg",
       "https://images.yuktravel.com/images/upload/articles/big1/EifelTower.jpg",
@@ -13,14 +13,12 @@ class HomeScreenPengayaan extends StatelessWidget {
     ];
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(top: 20),
-        padding: EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+        margin: const EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.all(16),
+        child: ListView(
           children: [
             Container(
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Icon(Icons.alarm),
@@ -31,58 +29,59 @@ class HomeScreenPengayaan extends StatelessWidget {
                 ],
               ),
             ),
-            Text(
+            const Text(
               "Welcome",
               style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
                   color: Color(0xff54C5F8)),
             ),
-            Text(
+            const Text(
               "Hilmy",
               style: TextStyle(
                   fontSize: 38,
                   fontWeight: FontWeight.w400,
                   color: Color(0xff01579B)),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey, width: 0.0),
                   ),
                   hintText: "Search"),
             ),
-            Container(
-              // color: Colors.amber,
-              margin: EdgeInsets.only(top: 10),
-              height: MediaQuery.of(context).size.height / 3,
-              width: MediaQuery.of(context).size.width / 1,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Recomended Place"),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Container(
-                    height: 100,
-                    child: GridView.builder(
-                        itemCount: data_object.length,
-                        gridDelegate:
-                            const SliverGridDelegateWithMaxCrossAxisExtent(
-                                maxCrossAxisExtent: 200),
-                        itemBuilder: (context, index) {
-                          return Card(
-                            color: Colors.grey,
-                            child: Center(
-                                child: Image.network(data_object[index])),
-                          );
-                        }),
-                  )
-                ],
+            Expanded(
+              child: Container(
+                margin: const EdgeInsets.only(top: 20),
+                height: MediaQuery.of(context).size.height / 1.5,
+                width: MediaQuery.of(context).size.width / 1,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text("Recomended Place"),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height / 2,
+                      child: GridView.builder(
+                          itemCount: dataObject.length,
+                          gridDelegate:
+                              const SliverGridDelegateWithMaxCrossAxisExtent(
+                                  maxCrossAxisExtent: 250),
+                          itemBuilder: (context, index) {
+                            return Card(
+                              color: Colors.grey,
+                              child: Center(
+                                  child: Image.network(dataObject[index])),
+                            );
+                          }),
+                    )
+                  ],
+                ),
               ),
             )
           ],

@@ -10,11 +10,11 @@ class ButtonWidget extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       height: 80,
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       width: MediaQuery.of(context).size.height / 1,
       decoration: BoxDecoration(
           color: Colors.amber, borderRadius: BorderRadius.circular(10)),
-      child: Text("${title}"),
+      child: Text("$title"),
     );
   }
 }
